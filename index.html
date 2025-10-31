@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="WDD 231 Course Home Page for Web Frontend Development I.">
+  <meta name="author" content="Edmozer Cavalcante">
+  <title>WDD 231 • Course Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/small.css">
+  <link rel="stylesheet" href="css/larger.css">
+  <script src="js/navigation.js" defer></script>
+  <script src="js/date.js" defer></script>
+  <script src="js/course.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/logo.svg" alt="BYU-I style site logo" width="40" height="40">
+      <span class="site-name">WDD 231 • Edmozer Cavalcante</span>
+    </div>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <nav id="primary-nav" class="nav" aria-label="Primary">
+      <a href="#" class="active" aria-current="page">Home</a>
+      <a href="chamber/">Chamber</a>
+      <a href="final/">Final</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+    <section class="about">
+      <h2>About Me</h2>
+      <p>
+        Hi, I’m Ed Cavalcante — a software developer and product manager passionate about building
+        smart, data-driven web applications. I work on projects that combine AI, real-estate
+        analytics, and automation to create practical, scalable solutions. I enjoy clean code,
+        thoughtful design, and improving QA processes so teams can deliver better products faster.
+        When I’m not coding, I like learning new tech, refining workflows, and exploring ideas
+        that make complex systems simpler.
+      </p>
+    </section>
+
+    <section class="student-photo">
+      <h2>Student Photo</h2>
+      <figure>
+        <img src="images/student-placeholder.jpg" width="500" height="500" alt="Portrait of Ed" loading="lazy">
+        <figcaption>Upload your own optimized portrait. Keep each image under 125 kB.</figcaption>
+      </figure>
+    </section>
+
+    <section class="certificate">
+      <h2>Web Certificate Courses</h2>
+      <div class="filters" role="group" aria-label="Filter courses">
+        <button id="filter-all" class="chip selected">All</button>
+        <button id="filter-cse" class="chip">CSE</button>
+        <button id="filter-wdd" class="chip">WDD</button>
+      </div>
+      <div id="course-list" class="course-list" aria-live="polite"></div>
+      <p id="credit-total" class="credit-total">Total credits currently shown: 0</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="social">
+      <a href="https://github.com/your-github-username/wdd231" target="_blank" rel="noopener" aria-label="GitHub">
+        <img src="images/github.svg" width="28" height="28" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img src="images/linkedin.svg" width="28" height="28" alt="LinkedIn">
+      </a>
+      <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X">
+        <img src="images/x.svg" width="28" height="28" alt="X">
+      </a>
+    </div>
+  <p>&copy; <span id="year"></span> • <span class="student">Edmozer Cavalcante</span> • Utah, USA</p>
+    <p id="lastModified">Last Modified: </p>
+  </footer>
+</body>
+</html>
