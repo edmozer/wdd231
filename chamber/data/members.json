@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Tech Innovators Inc.",
+    "address": "123 Main St, Cityville",
+    "phone": "(555) 123-4567",
+    "website": "https://techinnovators.com",
+  "image": "tech.jpg",
+    "membership": 3,
+    "info": "Leading technology solutions for businesses."
+  },
+  {
+    "name": "Green Fields Market",
+    "address": "456 Oak Ave, Cityville",
+    "phone": "(555) 234-5678",
+    "website": "https://greenfieldsmarket.com",
+  "image": "green_field.jpg",
+    "membership": 2,
+    "info": "Organic foods and local produce."
+  },
+  {
+    "name": "Cityville Fitness",
+    "address": "789 Maple Rd, Cityville",
+    "phone": "(555) 345-6789",
+    "website": "https://cityvillefitness.com",
+  "image": "fitness.jpg",
+    "membership": 1,
+    "info": "Community gym and wellness center."
+  },
+  {
+    "name": "Bright Minds Academy",
+    "address": "321 Elm St, Cityville",
+    "phone": "(555) 456-7890",
+    "website": "https://brightmindsacademy.com",
+  "image": "academy.jpg",
+    "membership": 2,
+    "info": "Private K-12 school focused on STEM."
+  },
+  {
+    "name": "Cityville Bookstore",
+    "address": "654 Pine St, Cityville",
+    "phone": "(555) 567-8901",
+    "website": "https://cityvillebooks.com",
+  "image": "bookstore.jpg",
+    "membership": 1,
+    "info": "Independent bookstore and cafe."
+  },
+  {
+    "name": "Urban Eats Diner",
+    "address": "987 Cedar Ave, Cityville",
+    "phone": "(555) 678-9012",
+    "website": "https://urbaneatsdiner.com",
+  "image": "diner.jpg",
+    "membership": 3,
+    "info": "Modern diner with local flavors."
+  },
+  {
+    "name": "Cityville Florist",
+    "address": "159 Spruce St, Cityville",
+    "phone": "(555) 789-0123",
+    "website": "https://cityvilleflorist.com",
+  "image": "florist.jpg",
+    "membership": 2,
+    "info": "Fresh flowers and event arrangements."
+  }
+]

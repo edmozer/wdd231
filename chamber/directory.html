@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Cityville Chamber of Commerce Directory Page">
+	<meta name="author" content="Edmozer Cavalcante">
+	<title>Cityville Chamber Directory | WDD 231</title>
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="Cityville Chamber Directory">
+	<meta property="og:description" content="Discover Cityville Chamber members and businesses.">
+	<meta property="og:image" content="images/chamber-og.png">
+	<meta property="og:url" content="https://edmozer.github.io/wdd231/chamber/directory.html">
+	<link rel="stylesheet" href="styles/directory.css">
+</head>
+<body>
+	<header>
+		<div class="brand">
+			<img src="../images/chamber/chamber.png" alt="Cityville Chamber Logo" width="48" height="48">
+			<span class="site-name">Cityville Chamber of Commerce</span>
+		</div>
+		<nav>
+			<a href="directory.html" class="active">Directory</a>
+			<a href="index.html">Home</a>
+			<a href="about.html">About</a>
+			<a href="contact.html">Contact</a>
+		</nav>
+	</header>
+	<main>
+		<h1>Member Directory</h1>
+		<div class="view-toggle">
+			<button id="grid-view" type="button">Grid View</button>
+			<button id="list-view" type="button">List View</button>
+		</div>
+		<div id="members-container" class="grid"></div>
+	</main>
+	<footer>
+		<span>Edmozer Cavalcante | WDD 231</span>
+		<span>&copy; <span id="year"></span> | <span id="lastModified"></span></span>
+	</footer>
+	<script src="scripts/directory.js" defer></script>
+</body>
+</html>
