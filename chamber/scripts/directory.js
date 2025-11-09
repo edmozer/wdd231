@@ -18,7 +18,7 @@ function renderMembers(members, view = 'grid') {
     const card = document.createElement('div');
     card.className = view === 'grid' ? 'member-card' : 'member-list-item';
     card.innerHTML = `
-  <img src="../images/chamber/${m.image}" alt="${m.name} logo" class="member-img">
+  <img src="images/images/chamber/${m.image}" alt="${m.name} logo" class="member-img">
       <div class="member-info">
         <h3>${m.name}</h3>
         <p>${m.address}</p>
