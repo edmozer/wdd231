@@ -1,3 +1,156 @@
+/*
+Home page layout for WDD 231 chamber project.
+
+Use:
+- Full width dark hero with background image and join button
+- Below hero, three equal cards in a responsive grid for events, weather, and member spotlights
+- Cards should look like modern dashboard tiles with rounded corners and shadow
+- Mobile: hero becomes single column, cards stack in one column
+*/
+
+.chamber-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  background: #111;
+  color: #fff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-content {
+  padding: 2rem 2.5rem 2rem 0;
+}
+
+.hero-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  color: #e0e0e0;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  margin-bottom: 0.75rem;
+}
+
+.hero p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.hero-cta {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background: #f5b400;
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 999px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+}
+
+.card ul {
+  padding-left: 1.2rem;
+  margin: 0 0 0.75rem;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #006ad4;
+}
+
+.current-temp {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.current-temp span:first-child {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-right: 0.4rem;
+}
+
+.forecast-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.forecast-list li {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.spotlights-container {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.spotlights-container article {
+  border: 1px solid #eee;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.spotlights-container img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-content {
+    padding: 1.5rem;
+  }
+
+  .info-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 /* directory.css: Chamber directory page styles */
 body {
   font-family: Inter, Arial, sans-serif;

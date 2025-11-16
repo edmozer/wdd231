@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Welcome to the Cityville Chamber of Commerce. Discover local businesses, events, weather, and join our community.">
+    <meta name="author" content="Edmozer Cavalcante">
+    <title>Cityville Chamber Home | WDD 231</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <img src="images/images/chamber/chamber.png" alt="Cityville Chamber Logo" width="48" height="48">
+            <span class="site-name">Cityville Chamber of Commerce</span>
+        </div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+        <!--
+        Chamber home page layout:
+        Hero section with image and intro text plus join CTA.
+        Below, three cards in a grid: events, weather, member spotlights.
+        Use semantic sections and asides.
+        -->
+        <main class="chamber-main">
+            <section class="hero">
+                <div class="hero-media">
+                      <img src="images/images/chamber/asheville.jpg" alt="Cityview of Asheville at sunset">
+                </div>
+                <div class="hero-content">
+                    <p class="hero-kicker">Cityville Chamber of Commerce</p>
+                    <h1>Connecting local businesses and community</h1>
+                    <p>Support growth, find new partners and stay informed about what is happening in Cityville.</p>
+                    <a href="join.html" class="hero-cta">Join the Chamber</a>
+                </div>
+            </section>
+
+            <section class="info-grid">
+                <section class="card card-events">
+                    <h2>Current Events</h2>
+                    <ul>
+                        <li><strong>Nov 20</strong> Annual Business Expo</li>
+                        <li><strong>Dec 5</strong> Holiday Networking Mixer</li>
+                    </ul>
+                    <a href="discover.html" class="card-link">View more events</a>
+                </section>
+
+                <section class="card card-weather">
+                    <h2>Cityville Weather</h2>
+                    <p class="current-temp">
+                        <span id="current-temp">--</span>
+                        <span id="current-desc">Loading...</span>
+                    </p>
+                    <ul id="forecast-list" class="forecast-list">
+                        <!-- three day forecast goes here -->
+                    </ul>
+                </section>
+
+                <section class="card card-spotlights">
+                    <h2>Member Spotlights</h2>
+                    <div id="spotlights-container" class="spotlights-container">
+                        <!-- spotlight cards created by JS -->
+                    </div>
+                    <a href="directory.html" class="card-link">See all members</a>
+                </section>
+            </section>
+        </main>
+    <footer>
+        <span>Edmozer Cavalcante | WDD 231</span>
+        <span>&copy; <span id="year"></span> | <span id="lastModified"></span></span>
+    </footer>
+    <script src="scripts/chamberHome.js" defer></script>
+</body>
+</html>
