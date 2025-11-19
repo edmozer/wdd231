@@ -6,29 +6,30 @@
     <meta name="description" content="Welcome to the Cityville Chamber of Commerce. Discover local businesses, events, weather, and join our community.">
     <meta name="author" content="Edmozer Cavalcante">
     <title>Cityville Chamber Home | WDD 231</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/images/chamber/favicon.ico" type="image/x-icon">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/directory.css">
-    <meta property="og:title" content="Cityville Chamber of Commerce – Home | WDD 231">
-    <meta property="og:description" content="Connect with local businesses, discover events, check the weather, and join the Cityville Chamber of Commerce. Empowering our community for growth and success.">
+    <meta property="og:title" content="Cityville Chamber Home | WDD 231">
+    <meta property="og:description" content="Welcome to the Cityville Chamber of Commerce. Discover local businesses, events, weather, and join our community.">
     <meta property="og:image" content="https://edmozer.github.io/wdd231/chamber/images/images/chamber/asheville.jpg">
     <meta property="og:url" content="https://edmozer.github.io/wdd231/chamber/">
 </head>
 <body>
     <header>
-        <div class="brand">
-            <img src="images/images/chamber/chamber.png" alt="Cityville Chamber Logo" width="48" height="48">
-            <span class="site-name">Cityville Chamber of Commerce</span>
-        </div>
-        <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="directory.html">Directory</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+        <nav class="main-nav">
+            <button class="nav-toggle" aria-label="Open navigation menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
         <!--
@@ -39,14 +40,14 @@
         -->
         <main class="chamber-main">
             <section class="hero">
-                <div class="hero-media">
-                      <img src="images/images/chamber/asheville.jpg" alt="Cityview of Asheville at sunset">
+                <div class="hero-media" style="position:relative;">
+                    <img src="images/images/chamber/asheville.jpg" alt="Cityview of Asheville at sunset">
+                    <a href="join.html" class="hero-cta">Join the Chamber</a>
                 </div>
                 <div class="hero-content">
                     <p class="hero-kicker">Cityville Chamber of Commerce</p>
                     <h1>Connecting local businesses and community</h1>
                     <p>Support growth, find new partners and stay informed about what is happening in Cityville.</p>
-                    <a href="join.html" class="hero-cta">Join the Chamber</a>
                 </div>
             </section>
 

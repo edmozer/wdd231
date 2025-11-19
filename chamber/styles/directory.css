@@ -20,7 +20,7 @@ Use:
   gap: 2rem;
   align-items: center;
   margin-bottom: 2.5rem;
-  background: #111;
+  background: #222;
   color: #fff;
   border-radius: 0.75rem;
   overflow: hidden;
@@ -42,7 +42,7 @@ Use:
   letter-spacing: 0.08em;
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
-  color: #e0e0e0;
+  color: #b0c4ff;
 }
 
 .hero h1 {
@@ -56,13 +56,20 @@ Use:
 }
 
 .hero-cta {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: inline-block;
-  padding: 0.6rem 1.4rem;
-  background: #f5b400;
-  color: #111;
+  padding: 0.8rem 2rem;
+  background: #0077ff;
+  color: #fff;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.1rem;
   border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  z-index: 2;
 }
 
 .info-grid {
@@ -72,10 +79,10 @@ Use:
 }
 
 .card {
-  background: #ffffff;
+  background: #fff;
   border-radius: 0.75rem;
   padding: 1.25rem 1.5rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
 }
 
 .card h2 {
@@ -123,19 +130,35 @@ Use:
 }
 
 .spotlights-container article {
-  border: 1px solid #eee;
+  border: 1px solid #0077ff;
   border-radius: 0.5rem;
   padding: 0.6rem 0.75rem;
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.6rem;
   align-items: center;
+  background: #f6f7fa;
 }
 
 .spotlights-container img {
   width: 50px;
   height: 50px;
   object-fit: contain;
+}
+
+.spotlights-container h3 {
+  color: #0077ff;
+  margin-bottom: 0.25rem;
+}
+
+.membership {
+  background: #0077ff;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: inline-block;
 }
 
 @media (max-width: 900px) {
@@ -150,8 +173,27 @@ Use:
   .info-grid {
     grid-template-columns: minmax(0, 1fr);
   }
+
+  /* Responsive Navigation */
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: none;
+  }
+  .main-nav.open .nav-links {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+  }
 }
-/* directory.css: Chamber directory page styles */
+
 body {
   font-family: Inter, Arial, sans-serif;
   margin: 0;
@@ -205,13 +247,6 @@ main {
   object-fit: contain;
   border-radius: 8px;
   background: #f0f0f0;
-}
-.membership {
-  display: inline-block;
-  margin-top: .5rem;
-  padding: .2rem .6rem;
-  border-radius: 6px;
-  font-size: .9rem;
 }
 .level-1 { background: #e6e8eb; color: #222; }
 .level-2 { background: #c0eaff; color: #0b5fff; }

@@ -34,7 +34,6 @@ async function fetchWeather() {
         document.getElementById('forecast-list').innerHTML = '';
     }
 }
-fetchWeather();
 
 async function fetchSpotlights() {
     try {
@@ -63,7 +62,19 @@ async function fetchSpotlights() {
         document.getElementById('spotlights-container').innerHTML = '<p>Unable to load member spotlights.</p>';
     }
 }
-fetchSpotlights();
 
 document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = document.lastModified;
+
+// Weather and spotlights test logic
+fetchWeather();
+fetchSpotlights();
+
+// Responsive navigation toggle
+const navToggle = document.querySelector('.nav-toggle');
+const mainNav = document.querySelector('.main-nav');
+if (navToggle && mainNav) {
+  navToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('open');
+  });
+}
