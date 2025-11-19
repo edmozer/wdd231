@@ -35,41 +35,6 @@ async function fetchWeather() {
     }
 }
 
-async function fetchSpotlights() {
-    try {
-        const res = await fetch('data/members.json');
-        const data = await res.json();
-        const eligible = data.members.filter(m => ['Gold','Silver'].includes(m.membership));
-        const shuffled = eligible.sort(() => 0.5 - Math.random());
-        const spotlights = shuffled.slice(0, Math.floor(Math.random()*2)+2);
-        const container = document.getElementById('spotlights-container');
-        container.innerHTML = '';
-        spotlights.forEach(m => {
-            const card = document.createElement('article');
-            card.innerHTML = `
-                <img src="${m.logo}" alt="${m.name} logo">
-                <div>
-                  <h3>${m.name}</h3>
-                  <p><strong>Phone:</strong> ${m.phone}</p>
-                  <p><strong>Address:</strong> ${m.address}</p>
-                  <p><a href="${m.website}" target="_blank">Visit Website</a></p>
-                  <span class="membership">${m.membership} Member</span>
-                </div>
-            `;
-            container.appendChild(card);
-        });
-    } catch (err) {
-        document.getElementById('spotlights-container').innerHTML = '<p>Unable to load member spotlights.</p>';
-    }
-}
-
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = document.lastModified;
-
-// Weather and spotlights test logic
-fetchWeather();
-fetchSpotlights();
-
 // Responsive navigation toggle
 const navToggle = document.querySelector('.nav-toggle');
 const mainNav = document.querySelector('.main-nav');
@@ -78,3 +43,59 @@ if (navToggle && mainNav) {
     mainNav.classList.toggle('open');
   });
 }
+
+// Helper: Get random subset of array
+function getRandomSubset(arr, min=1, max=3) {
+  const count = Math.min(max, Math.max(min, arr.length));
+  const shuffled = arr.slice().sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, count);
+}
+
+// Fetch and filter members
+async function fetchSpotlightMembers() {
+  try {
+    const response = await fetch('data/members.json');
+    if (!response.ok) throw new Error('Network response was not ok');
+    const members = await response.json();
+    // Membership: 3=Gold, 2=Silver, 1=Bronze
+    const eligible = members.filter(m => m.membership === 3 || m.membership === 2);
+    return getRandomSubset(eligible);
+  } catch (err) {
+    return null;
+  }
+}
+
+// Build DOM for each spotlight
+function buildSpotlightCard(member) {
+  const card = document.createElement('article');
+  card.className = 'spotlight-card';
+  card.innerHTML = `
+    <img src="images/images/chamber/${member.image}" alt="${member.name}" />
+    <div>
+      <h3>${member.name}</h3>
+      <span class="membership">${member.membership === 3 ? 'Gold' : 'Silver'}</span>
+    </div>
+  `;
+  return card;
+}
+
+// Render spotlights
+async function renderSpotlights() {
+  const container = document.querySelector('.spotlights-container');
+  container.innerHTML = '';
+  const spotlights = await fetchSpotlightMembers();
+  if (!spotlights || spotlights.length === 0) {
+    container.innerHTML = '<p style="color:#b00;text-align:center;">Unable to load member spotlights.</p>';
+    return;
+  }
+  spotlights.forEach(member => {
+    container.appendChild(buildSpotlightCard(member));
+  });
+}
+
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = document.lastModified;
+
+// Weather and spotlights test logic
+fetchWeather();
+renderSpotlights();
