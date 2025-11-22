@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Thank you for joining the Cityville Chamber of Commerce.">
+    <meta name="author" content="Edmozer Cavalcante">
+    <title>Thank You | Cityville Chamber</title>
+    <link rel="icon" href="images/images/chamber/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <script src="scripts/thankyou.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <button class="nav-toggle" aria-label="Open navigation menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="chamber-main">
+        <section class="thankyou-section">
+            <h1>Thank You for Applying!</h1>
+            <p>We have received your application. Here are the details you submitted:</p>
+            <div class="submission-details">
+                <!-- Details will be populated by JS -->
+                <p><strong>First Name:</strong> <span id="result-firstName"></span></p>
+                <p><strong>Last Name:</strong> <span id="result-lastName"></span></p>
+                <p><strong>Email:</strong> <span id="result-email"></span></p>
+                <p><strong>Mobile Phone:</strong> <span id="result-phone"></span></p>
+                <p><strong>Organization Name:</strong> <span id="result-orgName"></span></p>
+                <p><strong>Date Submitted:</strong> <span id="result-timestamp"></span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <span>Edmozer Cavalcante | WDD 231</span>
+        <span>&copy; <span id="year"></span> | <span id="lastModified"></span></span>
+    </footer>
+</body>
+</html>

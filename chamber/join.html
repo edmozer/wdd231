@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Join the Cityville Chamber of Commerce. Membership application form.">
+    <meta name="author" content="Edmozer Cavalcante">
+    <title>Join the Chamber | Cityville Chamber</title>
+    <link rel="icon" href="images/images/chamber/favicon.ico" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <script src="scripts/join.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <button class="nav-toggle" aria-label="Open navigation menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="chamber-main join-page-grid">
+        <section class="join-form-section">
+            <h1>Membership Application</h1>
+            <form method="get" action="thankyou.html" class="join-form">
+                <label title="First Name">
+                    First Name
+                    <input type="text" name="firstName" autocomplete="given-name" required>
+                </label>
+                <label title="Last Name">
+                    Last Name
+                    <input type="text" name="lastName" autocomplete="family-name" required>
+                </label>
+                <label title="Organizational Title">
+                    Organizational Title
+                    <input type="text" name="orgTitle" autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}" title="Must be at least 7 characters, letters, hyphens and spaces only.">
+                </label>
+                <label title="Email Address">
+                    Email
+                    <input type="email" name="email" autocomplete="email" placeholder="example@domain.com" required>
+                </label>
+                <label title="Mobile Phone">
+                    Mobile Phone
+                    <input type="tel" name="phone" autocomplete="tel" required>
+                </label>
+                <label title="Organization Name">
+                    Organization Name
+                    <input type="text" name="orgName" autocomplete="organization" required>
+                </label>
+                <label title="Membership Level">
+                    Membership Level
+                    <select name="membership" required>
+                        <option value="" disabled selected>Select a Level</option>
+                        <option value="np">NP Membership (No Fee)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+                <label title="Organization Description">
+                    Organization Description
+                    <textarea name="orgDesc"></textarea>
+                </label>
+                <input type="hidden" name="timestamp" id="timestamp">
+                <input type="submit" value="Apply for Membership" class="submit-btn">
+            </form>
+        </section>
+
+        <section class="membership-cards-section">
+            <h2>Membership Levels</h2>
+            <div class="membership-cards">
+                <div class="card membership-card" id="card-np">
+                    <h3>NP Membership</h3>
+                    <p>For non-profit organizations.</p>
+                    <button class="modal-trigger" data-modal="modal-np">View Benefits</button>
+                </div>
+                <div class="card membership-card" id="card-bronze">
+                    <h3>Bronze Membership</h3>
+                    <p>Essential business visibility.</p>
+                    <button class="modal-trigger" data-modal="modal-bronze">View Benefits</button>
+                </div>
+                <div class="card membership-card" id="card-silver">
+                    <h3>Silver Membership</h3>
+                    <p>Enhanced marketing package.</p>
+                    <button class="modal-trigger" data-modal="modal-silver">View Benefits</button>
+                </div>
+                <div class="card membership-card" id="card-gold">
+                    <h3>Gold Membership</h3>
+                    <p>Premium exposure and events.</p>
+                    <button class="modal-trigger" data-modal="modal-gold">View Benefits</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modals -->
+    <dialog id="modal-np" class="membership-modal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close modal">X</button>
+            <h2>NP Membership Benefits</h2>
+            <ul>
+                <li>No fee for non-profits</li>
+                <li>Listing in the directory</li>
+                <li>Access to community events</li>
+            </ul>
+        </div>
+    </dialog>
+    <dialog id="modal-bronze" class="membership-modal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close modal">X</button>
+            <h2>Bronze Membership Benefits</h2>
+            <ul>
+                <li>Basic directory listing</li>
+                <li>Event discounts</li>
+                <li>Monthly newsletter</li>
+            </ul>
+        </div>
+    </dialog>
+    <dialog id="modal-silver" class="membership-modal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close modal">X</button>
+            <h2>Silver Membership Benefits</h2>
+            <ul>
+                <li>Enhanced directory listing</li>
+                <li>Spotlight opportunity on homepage</li>
+                <li>Training webinar access</li>
+                <li>20% Event discount</li>
+            </ul>
+        </div>
+    </dialog>
+    <dialog id="modal-gold" class="membership-modal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close modal">X</button>
+            <h2>Gold Membership Benefits</h2>
+            <ul>
+                <li>Premium directory listing with logo</li>
+                <li>Homepage spotlight guarantee</li>
+                <li>VIP event access</li>
+                <li>50% Event discount</li>
+                <li>Dedicated account manager</li>
+            </ul>
+        </div>
+    </dialog>
+
+    <footer>
+        <span>Edmozer Cavalcante | WDD 231</span>
+        <span>&copy; <span id="year"></span> | <span id="lastModified"></span></span>
+    </footer>
+</body>
+</html>
