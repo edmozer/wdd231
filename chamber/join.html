@@ -14,6 +14,12 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/directory.css">
     <script src="scripts/join.js" defer></script>
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Join the Chamber | Cityville Chamber">
+    <meta property="og:description" content="Join the Cityville Chamber of Commerce. Membership application form.">
+    <meta property="og:image" content="https://edmozer.github.io/wdd231/chamber/images/images/chamber/asheville.jpg">
+    <meta property="og:url" content="https://edmozer.github.io/wdd231/chamber/join.html">
 </head>
 <body>
     <header>
@@ -37,31 +43,31 @@
             <form method="get" action="thankyou.html" class="join-form">
                 <label title="First Name">
                     First Name
-                    <input type="text" name="firstName" autocomplete="given-name" required>
+                    <input type="text" name="firstName" title="First Name" autocomplete="given-name" required>
                 </label>
                 <label title="Last Name">
                     Last Name
-                    <input type="text" name="lastName" autocomplete="family-name" required>
+                    <input type="text" name="lastName" title="Last Name" autocomplete="family-name" required>
                 </label>
                 <label title="Organizational Title">
                     Organizational Title
-                    <input type="text" name="orgTitle" autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}" title="Must be at least 7 characters, letters, hyphens and spaces only.">
+                    <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}" title="Must be at least 7 characters, letters, hyphens and spaces only.">
                 </label>
                 <label title="Email Address">
                     Email
-                    <input type="email" name="email" autocomplete="email" placeholder="example@domain.com" required>
+                    <input type="email" name="email" title="Email Address" autocomplete="email" placeholder="example@domain.com" required>
                 </label>
                 <label title="Mobile Phone">
                     Mobile Phone
-                    <input type="tel" name="phone" autocomplete="tel" required>
+                    <input type="tel" name="phone" title="Mobile Phone" autocomplete="tel" required>
                 </label>
                 <label title="Organization Name">
                     Organization Name
-                    <input type="text" name="orgName" autocomplete="organization" required>
+                    <input type="text" name="orgName" title="Organization Name" autocomplete="organization" required>
                 </label>
                 <label title="Membership Level">
                     Membership Level
-                    <select name="membership" required>
+                    <select name="membership" title="Membership Level" required>
                         <option value="" disabled selected>Select a Level</option>
                         <option value="np">NP Membership (No Fee)</option>
                         <option value="bronze">Bronze Membership</option>
@@ -71,7 +77,7 @@
                 </label>
                 <label title="Organization Description">
                     Organization Description
-                    <textarea name="orgDesc"></textarea>
+                    <textarea name="orgDesc" title="Organization Description"></textarea>
                 </label>
                 <input type="hidden" name="timestamp" id="timestamp">
                 <input type="submit" value="Apply for Membership" class="submit-btn">

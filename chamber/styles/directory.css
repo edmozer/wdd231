@@ -363,19 +363,9 @@ header, footer {
   color: #fff;
   padding: 1rem;
 }
-nav {
-  display: flex;
-  gap: 1rem;
-}
-nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: .5rem 1rem;
-  border-radius: 6px;
-}
-nav a.active {
-  background: #0b5fff;
-}
+/* ...existing code... */
+/* Removed duplicate nav styles */
+/* ...existing code... */
 .main-nav {
   position: relative;
   width: 100%;
@@ -432,10 +422,12 @@ nav a.active {
   border-radius: 0.5rem;
   transition: background 0.2s, color 0.2s;
 }
+/* ...existing code... */
 .nav-links a.active {
-  background: #0077ff;
+  background: #005bb5; /* Darker blue for better contrast */
   color: #fff;
 }
+/* ...existing code... */
 main {
   padding: 1rem;
 }
