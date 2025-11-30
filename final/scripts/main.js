@@ -104,7 +104,7 @@ function renderProjects(projects, container) {
     const likeIcon = isLiked ? '❤️' : '🤍';
 
     card.innerHTML = `
-      <img src="${project.image}" alt="${project.title}" loading="lazy" width="300" height="200" style="width: 100%; height: auto; border-radius: 4px;">
+      <img src="${project.image}" alt="${project.title}" loading="lazy" width="300" height="200" class="project-img-trigger" data-id="${project.id}" style="width: 100%; height: auto; border-radius: 4px; cursor: pointer;">
       <h3>${project.title}</h3>
       <p>${project.description}</p>
       <div class="tags">
@@ -121,12 +121,18 @@ function renderProjects(projects, container) {
   projectCards.forEach(card => container.appendChild(card));
 
   // Add Event Listeners
+  const openModalHandler = (e) => {
+    const id = parseInt(e.target.getAttribute('data-id'));
+    const project = allProjects.find(p => p.id === id);
+    openModal(project);
+  };
+
   container.querySelectorAll('.view-details').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const id = parseInt(e.target.getAttribute('data-id'));
-      const project = allProjects.find(p => p.id === id);
-      openModal(project);
-    });
+    btn.addEventListener('click', openModalHandler);
+  });
+
+  container.querySelectorAll('.project-img-trigger').forEach(img => {
+    img.addEventListener('click', openModalHandler);
   });
 
   container.querySelectorAll('.like-btn').forEach(btn => {
