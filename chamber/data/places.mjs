@@ -3,48 +3,48 @@ export const places = [
     name: "Cityville Park",
     address: "123 Park Ave, Cityville, ST 12345",
     description: "A beautiful park in the heart of the city, perfect for picnics and outdoor activities.",
-    image: "images/images/chamber/park.webp"
+    image: "images/images/chamber/green_field.jpg"
   },
   {
-    name: "Historic Museum",
+    name: "Historic District",
     address: "456 History Ln, Cityville, ST 12345",
-    description: "Explore the rich history of Cityville with exhibits dating back to the 1800s.",
-    image: "images/images/chamber/museum.webp"
+    description: "Explore the rich history of Cityville with scenic views and historic architecture.",
+    image: "images/images/chamber/asheville.jpg"
   },
   {
-    name: "Cityville Library",
+    name: "Cityville Bookstore",
     address: "789 Read St, Cityville, ST 12345",
     description: "A quiet place to study and read, with a vast collection of books and digital resources.",
-    image: "images/images/chamber/library.webp"
+    image: "images/images/chamber/bookstore.jpg"
   },
   {
-    name: "Downtown Market",
+    name: "Downtown Diner",
     address: "101 Market Blvd, Cityville, ST 12345",
-    description: "Fresh produce, local crafts, and delicious food from local vendors.",
-    image: "images/images/chamber/market.webp"
+    description: "Enjoy classic comfort food and local favorites in a retro dining atmosphere.",
+    image: "images/images/chamber/diner.jpg"
   },
   {
-    name: "Cityville Zoo",
-    address: "202 Animal Way, Cityville, ST 12345",
-    description: "Home to over 200 species of animals, offering educational programs and fun for the family.",
-    image: "images/images/chamber/zoo.webp"
+    name: "Cityville Fitness",
+    address: "202 Active Way, Cityville, ST 12345",
+    description: "State-of-the-art equipment and classes to help you stay healthy and active.",
+    image: "images/images/chamber/fitness.jpg"
   },
   {
-    name: "Art Gallery",
-    address: "303 Art Dr, Cityville, ST 12345",
-    description: "Showcasing contemporary and classic art from local and international artists.",
-    image: "images/images/chamber/gallery.webp"
+    name: "Tech Hub",
+    address: "303 Innovation Dr, Cityville, ST 12345",
+    description: "A collaborative space for startups, tech enthusiasts, and digital nomads.",
+    image: "images/images/chamber/tech.jpg"
   },
   {
-    name: "Science Center",
-    address: "404 Science Ct, Cityville, ST 12345",
-    description: "Interactive exhibits and hands-on activities to spark curiosity in science and technology.",
-    image: "images/images/chamber/science.webp"
+    name: "Cityville Academy",
+    address: "404 Education Ct, Cityville, ST 12345",
+    description: "Providing top-tier education and workshops for lifelong learners.",
+    image: "images/images/chamber/academy.jpg"
   },
   {
     name: "Botanical Garden",
     address: "505 Flower Rd, Cityville, ST 12345",
     description: "A serene escape featuring diverse plant collections and themed gardens.",
-    image: "images/images/chamber/garden.webp"
+    image: "images/images/chamber/florist.jpg"
   }
 ];
