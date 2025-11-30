@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Discover Cityville - Explore local attractions and points of interest.">
+    <meta name="author" content="Edmozer Cavalcante">
+    <title>Discover Cityville | Cityville Chamber</title>
+    <link rel="icon" href="images/images/chamber/favicon.ico" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <script type="module" src="scripts/discover.js" defer></script>
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Discover Cityville | Cityville Chamber">
+    <meta property="og:description" content="Explore the best of Cityville. Parks, museums, and more.">
+    <meta property="og:image" content="https://edmozer.github.io/wdd231/chamber/images/images/chamber/asheville.jpg">
+    <meta property="og:url" content="https://edmozer.github.io/wdd231/chamber/discover.html">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <button class="nav-toggle" aria-label="Open navigation menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="chamber-main discover-page">
+        <div id="visitor-message" class="visitor-message"></div>
+        
+        <h1>Discover Cityville</h1>
+        
+        <div id="places-container" class="places-grid">
+            <!-- Cards will be injected here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cityville Chamber of Commerce | Edmozer Cavalcante | WDD 231 Project</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
