@@ -1,0 +1,124 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Weather App",
+      "description": "A real-time weather dashboard using OpenWeatherMap API.",
+      "technology": ["HTML", "CSS", "JavaScript"],
+      "category": "Web App",
+      "image": "https://placehold.co/300x200?text=Weather+App"
+    },
+    {
+      "id": 2,
+      "title": "Task Manager",
+      "description": "A productivity tool to manage daily tasks and to-dos.",
+      "technology": ["React", "Node.js"],
+      "category": "Web App",
+      "image": "https://placehold.co/300x200?text=Task+Manager"
+    },
+    {
+      "id": 3,
+      "title": "E-commerce Store",
+      "description": "An online store with cart functionality and checkout.",
+      "technology": ["Vue.js", "Firebase"],
+      "category": "E-commerce",
+      "image": "https://placehold.co/300x200?text=E-commerce"
+    },
+    {
+      "id": 4,
+      "title": "Portfolio v1",
+      "description": "My first personal portfolio website.",
+      "technology": ["HTML", "CSS"],
+      "category": "Website",
+      "image": "https://placehold.co/300x200?text=Portfolio"
+    },
+    {
+      "id": 5,
+      "title": "Blog Platform",
+      "description": "A content management system for blogging.",
+      "technology": ["PHP", "MySQL"],
+      "category": "CMS",
+      "image": "https://placehold.co/300x200?text=Blog"
+    },
+    {
+      "id": 6,
+      "title": "Chat Application",
+      "description": "Real-time chat app using WebSockets.",
+      "technology": ["Socket.io", "Express"],
+      "category": "Web App",
+      "image": "https://placehold.co/300x200?text=Chat"
+    },
+    {
+      "id": 7,
+      "title": "Recipe Finder",
+      "description": "Search for recipes based on ingredients.",
+      "technology": ["JavaScript", "API"],
+      "category": "Web App",
+      "image": "https://placehold.co/300x200?text=Recipe"
+    },
+    {
+      "id": 8,
+      "title": "Budget Tracker",
+      "description": "Track expenses and income visually.",
+      "technology": ["Chart.js", "JavaScript"],
+      "category": "Finance",
+      "image": "https://placehold.co/300x200?text=Budget"
+    },
+    {
+      "id": 9,
+      "title": "Fitness Log",
+      "description": "Log workouts and track progress over time.",
+      "technology": ["React Native"],
+      "category": "Mobile App",
+      "image": "https://placehold.co/300x200?text=Fitness"
+    },
+    {
+      "id": 10,
+      "title": "Quiz Game",
+      "description": "A trivia game with multiple categories.",
+      "technology": ["JavaScript", "HTML"],
+      "category": "Game",
+      "image": "https://placehold.co/300x200?text=Quiz"
+    },
+    {
+      "id": 11,
+      "title": "Markdown Editor",
+      "description": "Browser-based markdown editor with preview.",
+      "technology": ["React", "CSS"],
+      "category": "Tool",
+      "image": "https://placehold.co/300x200?text=Markdown"
+    },
+    {
+      "id": 12,
+      "title": "Currency Converter",
+      "description": "Convert currencies using live exchange rates.",
+      "technology": ["API", "JavaScript"],
+      "category": "Tool",
+      "image": "https://placehold.co/300x200?text=Currency"
+    },
+    {
+      "id": 13,
+      "title": "Pomodoro Timer",
+      "description": "Focus timer based on the Pomodoro technique.",
+      "technology": ["JavaScript", "CSS"],
+      "category": "Tool",
+      "image": "https://placehold.co/300x200?text=Pomodoro"
+    },
+    {
+      "id": 14,
+      "title": "Note Taker",
+      "description": "Simple note-taking app with local storage.",
+      "technology": ["JavaScript", "LocalStorage"],
+      "category": "Tool",
+      "image": "https://placehold.co/300x200?text=Notes"
+    },
+    {
+      "id": 15,
+      "title": "Calculator",
+      "description": "Standard calculator with scientific functions.",
+      "technology": ["HTML", "CSS", "JS"],
+      "category": "Tool",
+      "image": "https://placehold.co/300x200?text=Calculator"
+    }
+  ]
+}

@@ -6,7 +6,7 @@ body {
   padding: 0;
 }
 header {
-  background: #005bb5;
+  background: #003366;
   color: #fff;
   padding: 1.5rem 1rem;
   text-align: center;
@@ -25,7 +25,7 @@ main {
   padding: 2rem;
 }
 h2 {
-  color: #005bb5;
+  color: #003366;
   font-family: Inter, Arial, sans-serif;
   margin-top: 2rem;
 }
@@ -41,7 +41,7 @@ ul {
   vertical-align: middle;
   border: 1px solid #ccc;
 }
-.color-sample.primary { background: #005bb5; }
+.color-sample.primary { background: #003366; }
 .color-sample.accent { background: #ffd700; }
 .color-sample.background { background: #f6f7f8; border: 1px solid #bbb; }
 .wireframes {
