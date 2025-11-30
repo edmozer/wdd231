@@ -28,15 +28,28 @@
       <a href="projects.html" class="active">Projects</a>
       <a href="contact.html">Contact</a>
       <a href="siteplan.html">Site Plan</a>
+      <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
     </nav>
   </header>
 
   <main>
     <h2>All Projects</h2>
-    <div class="filters">
-      <button id="filter-all">All</button>
-      <button id="filter-webapp">Web Apps</button>
-      <button id="filter-tools">Tools</button>
+    <div class="controls">
+      <div class="filters">
+        <button id="filter-all" class="active">All</button>
+        <button id="filter-webapp">Web Apps</button>
+        <button id="filter-tools">Tools</button>
+      </div>
+      <div class="search-sort">
+        <input type="text" id="search-input" placeholder="Search projects...">
+        <select id="sort-select">
+          <option value="default">Sort By</option>
+          <option value="name-asc">Name (A-Z)</option>
+          <option value="name-desc">Name (Z-A)</option>
+          <option value="date-new">Date (Newest)</option>
+          <option value="date-old">Date (Oldest)</option>
+        </select>
+      </div>
     </div>
     <div id="projects-container" class="projects-grid">
       <!-- Projects will be loaded here via JS -->

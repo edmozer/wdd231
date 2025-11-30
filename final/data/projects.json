@@ -2,123 +2,153 @@
   "projects": [
     {
       "id": 1,
-      "title": "Weather App",
-      "description": "A real-time weather dashboard using OpenWeatherMap API.",
-      "technology": ["HTML", "CSS", "JavaScript"],
+      "title": "Weather Dashboard",
+      "description": "A comprehensive weather dashboard providing real-time forecasts, humidity levels, and wind speeds for any city worldwide. Features dynamic background changes based on weather conditions.",
+      "technology": ["HTML", "CSS", "JavaScript", "OpenWeather API"],
       "category": "Web App",
-      "image": "https://placehold.co/300x200?text=Weather+App"
+      "image": "https://placehold.co/600x400/003366/FFF?text=Weather+App",
+      "likes": 0,
+      "date": "2024-01-15"
     },
     {
       "id": 2,
-      "title": "Task Manager",
-      "description": "A productivity tool to manage daily tasks and to-dos.",
-      "technology": ["React", "Node.js"],
+      "title": "TaskMaster Pro",
+      "description": "An advanced productivity tool designed to streamline workflow. Includes drag-and-drop task management, priority tagging, and deadline reminders.",
+      "technology": ["React", "Node.js", "MongoDB"],
       "category": "Web App",
-      "image": "https://placehold.co/300x200?text=Task+Manager"
+      "image": "https://placehold.co/600x400/005bb5/FFF?text=Task+Manager",
+      "likes": 0,
+      "date": "2024-02-20"
     },
     {
       "id": 3,
-      "title": "E-commerce Store",
-      "description": "An online store with cart functionality and checkout.",
-      "technology": ["Vue.js", "Firebase"],
+      "title": "Luxe E-commerce",
+      "description": "A fully functional online store featuring a shopping cart, user authentication, and secure checkout integration. Optimized for mobile devices.",
+      "technology": ["Vue.js", "Firebase", "Stripe"],
       "category": "E-commerce",
-      "image": "https://placehold.co/300x200?text=E-commerce"
+      "image": "https://placehold.co/600x400/ffd700/333?text=E-commerce",
+      "likes": 0,
+      "date": "2024-03-10"
     },
     {
       "id": 4,
       "title": "Portfolio v1",
-      "description": "My first personal portfolio website.",
+      "description": "The initial iteration of my personal portfolio. Highlights my journey as a developer and showcases early projects with a focus on semantic HTML.",
       "technology": ["HTML", "CSS"],
       "category": "Website",
-      "image": "https://placehold.co/300x200?text=Portfolio"
+      "image": "https://placehold.co/600x400/333/FFF?text=Portfolio+v1",
+      "likes": 0,
+      "date": "2023-11-05"
     },
     {
       "id": 5,
-      "title": "Blog Platform",
-      "description": "A content management system for blogging.",
-      "technology": ["PHP", "MySQL"],
+      "title": "BlogCMS",
+      "description": "A custom-built Content Management System allowing users to create, edit, and delete blog posts. Includes a rich text editor and image upload capability.",
+      "technology": ["PHP", "MySQL", "Bootstrap"],
       "category": "CMS",
-      "image": "https://placehold.co/300x200?text=Blog"
+      "image": "https://placehold.co/600x400/660000/FFF?text=Blog+CMS",
+      "likes": 0,
+      "date": "2023-12-12"
     },
     {
       "id": 6,
-      "title": "Chat Application",
-      "description": "Real-time chat app using WebSockets.",
-      "technology": ["Socket.io", "Express"],
+      "title": "ChatStream",
+      "description": "A real-time messaging application supporting private and group chats. Features instant notifications and message history persistence.",
+      "technology": ["Socket.io", "Express", "React"],
       "category": "Web App",
-      "image": "https://placehold.co/300x200?text=Chat"
+      "image": "https://placehold.co/600x400/006600/FFF?text=Chat+App",
+      "likes": 0,
+      "date": "2024-04-01"
     },
     {
       "id": 7,
-      "title": "Recipe Finder",
-      "description": "Search for recipes based on ingredients.",
-      "technology": ["JavaScript", "API"],
+      "title": "Culinary Finder",
+      "description": "A recipe search engine that helps users find meals based on available ingredients. Includes dietary filters and nutritional information.",
+      "technology": ["JavaScript", "Edamam API"],
       "category": "Web App",
-      "image": "https://placehold.co/300x200?text=Recipe"
+      "image": "https://placehold.co/600x400/ff6600/FFF?text=Recipe+Finder",
+      "likes": 0,
+      "date": "2024-01-25"
     },
     {
       "id": 8,
-      "title": "Budget Tracker",
-      "description": "Track expenses and income visually.",
+      "title": "Budget Visualizer",
+      "description": "A financial tracking tool that visualizes income and expenses using interactive charts. Helps users analyze spending habits over time.",
       "technology": ["Chart.js", "JavaScript"],
       "category": "Finance",
-      "image": "https://placehold.co/300x200?text=Budget"
+      "image": "https://placehold.co/600x400/660066/FFF?text=Budget+Tracker",
+      "likes": 0,
+      "date": "2024-02-15"
     },
     {
       "id": 9,
-      "title": "Fitness Log",
-      "description": "Log workouts and track progress over time.",
-      "technology": ["React Native"],
+      "title": "FitTrack Mobile",
+      "description": "A cross-platform mobile application for logging workouts and tracking fitness progress. Syncs data across devices.",
+      "technology": ["React Native", "Redux"],
       "category": "Mobile App",
-      "image": "https://placehold.co/300x200?text=Fitness"
+      "image": "https://placehold.co/600x400/009999/FFF?text=Fitness+Log",
+      "likes": 0,
+      "date": "2024-03-22"
     },
     {
       "id": 10,
-      "title": "Quiz Game",
-      "description": "A trivia game with multiple categories.",
-      "technology": ["JavaScript", "HTML"],
+      "title": "Trivia Master",
+      "description": "An engaging quiz game with multiple categories and difficulty levels. Tracks high scores and challenges users with timed questions.",
+      "technology": ["JavaScript", "HTML", "CSS"],
       "category": "Game",
-      "image": "https://placehold.co/300x200?text=Quiz"
+      "image": "https://placehold.co/600x400/990033/FFF?text=Quiz+Game",
+      "likes": 0,
+      "date": "2023-10-30"
     },
     {
       "id": 11,
-      "title": "Markdown Editor",
-      "description": "Browser-based markdown editor with preview.",
+      "title": "MarkDown Live",
+      "description": "A browser-based Markdown editor with a live preview pane. Supports syntax highlighting and export to HTML.",
       "technology": ["React", "CSS"],
       "category": "Tool",
-      "image": "https://placehold.co/300x200?text=Markdown"
+      "image": "https://placehold.co/600x400/333333/FFF?text=Markdown+Editor",
+      "likes": 0,
+      "date": "2024-01-05"
     },
     {
       "id": 12,
-      "title": "Currency Converter",
-      "description": "Convert currencies using live exchange rates.",
+      "title": "CurrencyX",
+      "description": "A currency conversion tool providing up-to-the-minute exchange rates for over 150 currencies. Includes a historical rate chart.",
       "technology": ["API", "JavaScript"],
       "category": "Tool",
-      "image": "https://placehold.co/300x200?text=Currency"
+      "image": "https://placehold.co/600x400/003300/FFF?text=Currency+Converter",
+      "likes": 0,
+      "date": "2024-02-28"
     },
     {
       "id": 13,
-      "title": "Pomodoro Timer",
-      "description": "Focus timer based on the Pomodoro technique.",
+      "title": "Focus Pomo",
+      "description": "A customizable Pomodoro timer to enhance productivity. Features adjustable work/break intervals and audio notifications.",
       "technology": ["JavaScript", "CSS"],
       "category": "Tool",
-      "image": "https://placehold.co/300x200?text=Pomodoro"
+      "image": "https://placehold.co/600x400/cc0000/FFF?text=Pomodoro",
+      "likes": 0,
+      "date": "2024-03-15"
     },
     {
       "id": 14,
-      "title": "Note Taker",
-      "description": "Simple note-taking app with local storage.",
+      "title": "QuickNotes",
+      "description": "A lightweight note-taking application that persists data locally. Supports rich text formatting and categorization.",
       "technology": ["JavaScript", "LocalStorage"],
       "category": "Tool",
-      "image": "https://placehold.co/300x200?text=Notes"
+      "image": "https://placehold.co/600x400/ffcc00/333?text=Note+Taker",
+      "likes": 0,
+      "date": "2023-11-20"
     },
     {
       "id": 15,
-      "title": "Calculator",
-      "description": "Standard calculator with scientific functions.",
+      "title": "SciCalc",
+      "description": "A robust scientific calculator capable of complex mathematical functions. Designed with a clean, neumorphic user interface.",
       "technology": ["HTML", "CSS", "JS"],
       "category": "Tool",
-      "image": "https://placehold.co/300x200?text=Calculator"
+      "image": "https://placehold.co/600x400/666666/FFF?text=Calculator",
+      "likes": 0,
+      "date": "2023-12-05"
     }
   ]
 }
