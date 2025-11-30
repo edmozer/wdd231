@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Project Demo Runner">
+  <meta name="author" content="Edmozer Cavalcante">
+  <title>Project Demo | BYU-I Student Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="../images/favicon.svg">
+  <style>
+    /* Demo Specific Styles */
+    .demo-container {
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      padding: 2rem;
+      margin-top: 2rem;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .demo-interface {
+      width: 100%;
+      max-width: 800px;
+      border: 2px solid var(--primary-color);
+      border-radius: 8px;
+      padding: 1rem;
+      background: var(--background-color);
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .loader {
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid var(--accent-color);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 1rem;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .interactive-btn {
+      background: var(--accent-color);
+      color: #333;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: transform 0.2s;
+    }
+
+    .interactive-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <h1>Student Portfolio</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2 id="demo-title">Loading Project...</h2>
+    <p id="demo-desc">Please wait while we initialize the application environment.</p>
+
+    <div class="demo-container">
+      <div id="demo-stage" class="demo-interface">
+        <div class="loader"></div>
+        <p>Booting up system...</p>
+      </div>
+    </div>
+
+    <a href="projects.html" class="back-link">← Back to Projects</a>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Edmozer Cavalcante | BYU-Idaho</p>
+  </footer>
+
+  <script type="module">
+    // Inline script for demo logic to keep it self-contained
+    const params = new URLSearchParams(window.location.search);
+    const projectId = parseInt(params.get('id'));
+    const demoTitle = document.getElementById('demo-title');
+    const demoDesc = document.getElementById('demo-desc');
+    const demoStage = document.getElementById('demo-stage');
+
+    async function initDemo() {
+      try {
+        const response = await fetch('data/projects.json');
+        const data = await response.json();
+        const project = data.projects.find(p => p.id === projectId);
+
+        if (!project) {
+          demoTitle.textContent = "Project Not Found";
+          demoStage.innerHTML = "<p>Invalid Project ID.</p>";
+          return;
+        }
+
+        demoTitle.textContent = `Running: ${project.title}`;
+        demoDesc.textContent = `Interactive Demo for ${project.title}. Version 1.0.0`;
+
+        // Simulate loading
+        setTimeout(() => {
+          renderInteractiveDemo(project);
+        }, 1500);
+
+      } catch (error) {
+        console.error(error);
+        demoStage.innerHTML = "<p>Error loading demo configuration.</p>";
+      }
+    }
+
+    function renderInteractiveDemo(project) {
+      // Generate different UIs based on category or title
+      let ui = '';
+      
+      if (project.title.includes('Weather')) {
+        ui = `
+          <div style="text-align:center;">
+            <h3>📍 Rexburg, ID</h3>
+            <div style="font-size: 4rem;">32°F</div>
+            <p>Snow Showers</p>
+            <div style="display:flex; gap:1rem; justify-content:center; margin-top:1rem;">
+              <span>💨 10mph</span>
+              <span>💧 80%</span>
+            </div>
+            <button class="interactive-btn" onclick="alert('Refreshing weather data...')">Update Forecast</button>
+          </div>
+        `;
+      } else if (project.title.includes('Calculator')) {
+        ui = `
+          <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap: 10px; max-width: 200px;">
+            <div style="grid-column: span 4; background:#eee; padding:10px; text-align:right; margin-bottom:10px;">0</div>
+            <button style="padding:10px;">7</button><button style="padding:10px;">8</button><button style="padding:10px;">9</button><button style="padding:10px;">/</button>
+            <button style="padding:10px;">4</button><button style="padding:10px;">5</button><button style="padding:10px;">6</button><button style="padding:10px;">*</button>
+            <button style="padding:10px;">1</button><button style="padding:10px;">2</button><button style="padding:10px;">3</button><button style="padding:10px;">-</button>
+            <button style="padding:10px;">0</button><button style="padding:10px;">.</button><button style="padding:10px;">=</button><button style="padding:10px;">+</button>
+          </div>
+        `;
+      } else if (project.category === 'Game') {
+        ui = `
+          <div style="text-align:center;">
+            <h3>Score: 0</h3>
+            <div style="height: 100px; width: 100px; background: red; margin: 20px auto; border-radius: 50%;"></div>
+            <button class="interactive-btn" onclick="this.previousElementSibling.style.background = '#' + Math.floor(Math.random()*16777215).toString(16)">Click Me!</button>
+          </div>
+        `;
+      } else if (project.category === 'E-commerce') {
+        ui = `
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1rem;">
+            <div style="border:1px solid #ccc; padding:1rem;">
+              <h4>Product A</h4>
+              <p>$19.99</p>
+              <button onclick="alert('Added to cart!')">Add to Cart</button>
+            </div>
+            <div style="border:1px solid #ccc; padding:1rem;">
+              <h4>Product B</h4>
+              <p>$29.99</p>
+              <button onclick="alert('Added to cart!')">Add to Cart</button>
+            </div>
+          </div>
+        `;
+      } else {
+        // Generic App Interface
+        ui = `
+          <div style="text-align:center;">
+            <h3>${project.title} Interface</h3>
+            <p>Welcome, User.</p>
+            <div style="margin: 2rem 0;">
+              <input type="text" placeholder="Enter command..." style="padding:0.5rem;">
+              <button onclick="alert('Command executed!')">Run</button>
+            </div>
+            <div style="background:#333; color:#0f0; padding:1rem; text-align:left; font-family:monospace;">
+              > System initialized...<br>
+              > Ready for input...
+            </div>
+          </div>
+        `;
+      }
+
+      demoStage.innerHTML = ui;
+    }
+
+    initDemo();
+  </script>
+</body>
+</html>

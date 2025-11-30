@@ -173,6 +173,7 @@ function openModal(project) {
     <p>${project.description}</p>
     <p><strong>Technologies:</strong> ${project.technology.join(', ')}</p>
     <button class="close-modal">Close</button>
+    <a href="demo.html?id=${project.id}" class="launch-demo-btn" style="display:block; text-align:center; margin-top:1rem; background:var(--accent-color); color:#333; padding:0.75rem; text-decoration:none; font-weight:bold; border-radius:4px;">🚀 Launch Live Demo</a>
   `;
 
   modal.showModal();
