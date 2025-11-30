@@ -115,7 +115,6 @@
   </footer>
 
   <script type="module">
-    // Inline script for demo logic to keep it self-contained
     const params = new URLSearchParams(window.location.search);
     const projectId = parseInt(params.get('id'));
     const demoTitle = document.getElementById('demo-title');
@@ -137,7 +136,6 @@
         demoTitle.textContent = `Running: ${project.title}`;
         demoDesc.textContent = `Interactive Demo for ${project.title}. Version 1.0.0`;
 
-        // Simulate loading
         setTimeout(() => {
           renderInteractiveDemo(project);
         }, 1500);
@@ -149,7 +147,6 @@
     }
 
     function renderInteractiveDemo(project) {
-      // Generate different UIs based on category or title
       let ui = '';
       
       if (project.title.includes('Weather')) {
@@ -199,7 +196,6 @@
           </div>
         `;
       } else {
-        // Generic App Interface
         ui = `
           <div style="text-align:center;">
             <h3>${project.title} Interface</h3>

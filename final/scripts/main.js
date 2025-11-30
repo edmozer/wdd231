@@ -1,6 +1,4 @@
-// Main JavaScript Module
-
-// 1. Navigation
+// Navigation
 const nav = document.querySelector('nav');
 const menuToggle = document.querySelector('.menu-toggle');
 
@@ -13,17 +11,16 @@ if (menuToggle) {
   });
 }
 
-// 2. Footer Year
+// Footer Year
 const yearSpan = document.getElementById('year');
 if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
 }
 
-// 3. Theme Toggle (Dark Mode)
+// Theme Toggle
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
-// Check local storage for theme preference
 const currentTheme = localStorage.getItem('theme');
 if (currentTheme) {
   body.setAttribute('data-theme', currentTheme);
@@ -46,7 +43,7 @@ if (themeToggle) {
   });
 }
 
-// 4. Data Fetching & Display
+// Data Fetching & Display
 const projectsContainer = document.getElementById('projects-container');
 const featuredContainer = document.getElementById('featured-container');
 const modal = document.getElementById('project-modal');
@@ -143,7 +140,7 @@ function renderProjects(projects, container) {
   });
 }
 
-// 5. Like Functionality
+// Like Functionality
 function toggleLike(id, btn) {
   const key = `like-${id}`;
   const isLiked = localStorage.getItem(key) === 'true';
@@ -159,11 +156,10 @@ function toggleLike(id, btn) {
   }
 }
 
-// 6. Modal Logic
+// Modal Logic
 function openModal(project) {
   if (!modal) return;
   
-  // Create modal content dynamically if elements don't exist (for robustness)
   let content = modal.querySelector('.modal-content');
   if (!content) {
       content = document.createElement('div');
@@ -184,7 +180,6 @@ function openModal(project) {
 
   modal.showModal();
   
-  // Re-attach close listener since we overwrote HTML
   modal.querySelector('.close-modal').addEventListener('click', () => modal.close());
 }
 
@@ -196,7 +191,7 @@ if (modal) {
   });
 }
 
-// 7. Advanced Controls (Filter, Search, Sort)
+// Advanced Controls
 function setupControls() {
   const filterBtns = document.querySelectorAll('.filters button');
   const searchInput = document.getElementById('search-input');
@@ -233,14 +228,14 @@ function applyFilters() {
 
   let filtered = allProjects;
 
-  // 1. Filter by Category
+  // Filter by Category
   if (activeFilter === 'filter-webapp') {
     filtered = filtered.filter(p => p.category === 'Web App');
   } else if (activeFilter === 'filter-tools') {
     filtered = filtered.filter(p => p.category === 'Tool');
   }
 
-  // 2. Filter by Search
+  // Filter by Search
   if (searchTerm) {
     filtered = filtered.filter(p => 
       p.title.toLowerCase().includes(searchTerm) || 
@@ -249,7 +244,7 @@ function applyFilters() {
     );
   }
 
-  // 3. Sort
+  // Sort
   if (sortValue === 'name-asc') {
     filtered.sort((a, b) => a.title.localeCompare(b.title));
   } else if (sortValue === 'name-desc') {
@@ -263,7 +258,7 @@ function applyFilters() {
   renderProjects(filtered, projectsContainer);
 }
 
-// 8. Local Storage (Visitor Counter)
+// Local Storage Visitor Counter
 function updateVisitorCount() {
   let count = localStorage.getItem('visitorCount');
   if (!count) {
@@ -273,7 +268,7 @@ function updateVisitorCount() {
   localStorage.setItem('visitorCount', count);
 }
 
-// 9. Form Data Display (Thank You Page)
+// Form Data Display
 const formResults = document.getElementById('form-results');
 if (formResults) {
   const params = new URLSearchParams(window.location.search);
@@ -294,6 +289,5 @@ if (formResults) {
   }
 }
 
-// Initialize
 loadProjects();
 updateVisitorCount();
